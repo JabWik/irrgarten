@@ -166,9 +166,9 @@ profile avatar; */
 
     int x;
 
-    cout << "MENU:" << endl;
+    cout << "//// MENU ////" << endl;
     cout << "1. New Game\n2. About\n3. Quit" << endl << endl;
-    cout << "To continue, type the number... ";
+    cout << "To continue, type the number... \n";
 
     cin >> x;
 
@@ -176,33 +176,35 @@ profile avatar; */
     {
     case 1:
         {
+            system("cls");
             playerGenerator(playerProfile, playerNames);
             break;
         }
     case 2:
         {
-            cout << "The Author is a cake~";
+            system("cls");
+            cout << "//// ABOUT ////" << endl;
+            cout << "Irrgarten is a classical, text-based console game in fantasy world with RPG elements. Coded by JabWik." << endl << endl;
+
+            menu();
+
             break;
         }
     case 3:
         {
-            cout << "EXIT";
+            exit(0);
             break;
         }
     }
 
  }
- 
+
 int main()
 
 {
     srand(time(NULL));
 
     menu();
-    playerGenerator(playerProfile, playerNames);
-
-    cout << playerNames[0];
-    cout << playerNames[1];
 
     return 0;
 }
